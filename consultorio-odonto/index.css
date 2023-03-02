@@ -1,0 +1,91 @@
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	background-image: url("https://heon.com.br/wp-content/uploads/2022/01/AdobeStock_186439249-1024x381.jpeg");
+	background-size: cover;
+}
+
+main{
+    width: 300px;
+}
+
+h1 {
+	color: black;
+	font-family: Arial, sans-serif;
+	font-weight: 700;
+	text-align: center;
+}
+
+form {
+    font-family: Arial, Helvetica, sans-serif;
+	display: flex;
+	flex-direction: column;
+	gap: 1px;
+	margin-bottom: 20px;
+}
+
+label {
+    font-weight: 700;
+	display: block;
+	margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="cpf"],
+input[type="submit"] {
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	font-size: 16px;
+}
+
+input[type="submit"] {
+	background-color: #4CAF50;
+	color: white;
+	cursor: pointer;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+input[type="password"]:hover {
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.404);
+}
+
+input[type="submit"]{
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+}
+
+input[type="submit"]:hover{
+    background-color: black;
+    color: white;
+}
+
+.paragraphs{
+    font-family: arial;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.link:hover{
+    text-decoration: none;
+}
+
+.erro {
+    max-width: 100%;
+    font-size: 10px;
+    display: none;
+    color: red;
+}
