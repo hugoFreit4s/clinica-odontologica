@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Clínica Odontológica - Login</title>
 	<link rel="stylesheet" href="index.css">
+	<link rel="icon" href="logo.png">
 </head>
+
 <body>
 	<header>
-		<h1>Bem-vindo de volta à Clínica Odontológica</h1>
+		<h1 style="margin-top: -110px;">Fazer login</h1>
 	</header>
 	<main>
 		<form>
 			<label for="username">CPF:</label>
-			<input type="text" id="username" name="username"><br>
+			<input type="cpf" id="cpf" name="cpf" required maxlength="14"
+				oninput="this.value = mascaraCPF(this.value);"><br>
 
 			<label for="password">Senha:</label>
 			<input type="password" id="password" name="password">
@@ -20,9 +24,19 @@
 			<input type="submit" value="Entrar">
 		</form>
 
-		<p class="paragraphs">Não tem uma conta? <a class="link" href="#">Cadastre-se aqui</a>.</p>
-		<p class="paragraphs">Esqueceu sua senha? <a class="link" href="#">Clique aqui</a>.</p>
-        <p class="paragraphs"><a class="link" href="index.html">Voltar para a tela de cadastro.</a></p>
-    </main>
+		<p class="paragraphs">Não tem uma conta? <a class="link" href="index.html">Cadastre-se aqui</a>.</p>
+		<p class="paragraphs">Esqueceu sua senha? <a class="link" href="esqueci-a-senha.html">Clique aqui</a>.</p>
+	</main>
+
+	<script>
+		function mascaraCPF(cpf) {
+			cpf = cpf.replace(/\D/g, "");
+			cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
+			cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
+			cpf = cpf.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+			return cpf;
+		}
+	</script>
 </body>
+
 </html>

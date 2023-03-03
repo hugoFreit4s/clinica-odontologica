@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="index.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css">
+	<link rel="icon" href="logo.png">
 </head>
 <body>
 	<header>
@@ -56,10 +57,10 @@
 		})
         
         function mascaraCPF(cpf){
-        cpf = cpf.replace(/\D/g,""); // Remove tudo o que não é dígito
-        cpf = cpf.replace(/(\d{3})(\d)/,"$1.$2"); // Coloca ponto entre o terceiro e o quarto dígitos
-        cpf = cpf.replace(/(\d{3})(\d)/,"$1.$2"); // Coloca ponto entre o sétimo e o oitavo dígitos
-        cpf = cpf.replace(/(\d{3})(\d{1,2})$/,"$1-$2"); // Coloca hífen entre o décimo e o décimo primeiro dígitos
+        cpf = cpf.replace(/\D/g,"");
+        cpf = cpf.replace(/(\d{3})(\d)/,"$1.$2");
+        cpf = cpf.replace(/(\d{3})(\d)/,"$1.$2");
+        cpf = cpf.replace(/(\d{3})(\d{1,2})$/,"$1-$2");
         return cpf;
         }
     </script>

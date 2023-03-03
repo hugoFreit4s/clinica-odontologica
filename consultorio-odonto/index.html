@@ -2,36 +2,37 @@
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
-	<title>Clínica Odontológica</title>
+	<title>Clínica Odontológica - Cadastro</title>
 	<link rel="stylesheet" href="index.css">
+	<link rel="icon" href="logo.png">
 </head>
 <body>
 	<header>
-		<h1>Bem-vindo à Clínica Odontológica</h1>
+		<h1>Bem-vindo à Clínica Odontológica - Realize seu cadastro!</h1>
 	</header>
 	<main>
 		<form>
 			<label for="nome">Nome:</label>
-			<input type="text" id="nome" name="nome"><br>
+			<input type="text" id="nome" name="nome" required><br>
 
 			<label for="email">E-mail:</label>
-			<input type="email" id="email" name="email"><br>
+			<input type="email" id="email" name="email" required><br>
 
 			<label for="telefone">Telefone:</label>
 			<input type="text" id="telefone" name="telefone" required><br>
 			
 			<label for="cpf">CPF:</label>
-			<input type="cpf" id="cpf" name="cpf"><br>
+			<input type="cpf" id="cpf" name="cpf" required maxlength="14" oninput="this.value = mascaraCPF(this.value);"><br>
 			
 			<label for="senha">Senha:</label>
-			<input type="password" id="senha" name="senha">
+			<input type="password" id="senha" name="senha" required>
 			<div id="senhaErro" class="erro">A senha deve ter pelo menos uma letra maiúscula, um caractere especial e mais de 8 caracteres.</div>
 
 
 			<input type="submit" value="Cadastrar">
 		</form>
 
-		<p class="paragraphs">Já tem uma conta? <a class="link" href="login.html">Faça login aqui</a></p>
+		<p class="paragraphs">Já tem uma conta? <a class="link" href="login.html">Faça login aqui</a>.</p>
 		<p class="paragraphs">Marque sua consulta <a class="link" href="agendamento.html">aqui</a>.</p>
 	</main>
 	
@@ -62,7 +63,14 @@
 			senhaErro.style.display = "block";
 		}
 		});
-
+		
+		function mascaraCPF(cpf){
+        cpf = cpf.replace(/\D/g,"");
+        cpf = cpf.replace(/(\d{3})(\d)/,"$1.$2");
+        cpf = cpf.replace(/(\d{3})(\d)/,"$1.$2");
+        cpf = cpf.replace(/(\d{3})(\d{1,2})$/,"$1-$2");
+        return cpf;
+        }
 	</script>
 </body>
 </html>
